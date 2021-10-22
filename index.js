@@ -63,5 +63,13 @@ const createCardNode = ()=>{
 }
 
 const portaCartas = document.querySelector("#app")
-for(var solo3=1;solo3<=3;solo3=solo3+parseInt(1))  
-       { portaCartas.appendChild(createCardNode())}
+const addCardButton = document.querySelector("#button")
+const addCard=()=>{
+    solo3=solo3+parseInt(1);
+    if(solo3<=3)
+    {
+        portaCartas.appendChild(createCardNode())
+    }
+}
+
+addCardButton.addEventListener('click', addCard)
